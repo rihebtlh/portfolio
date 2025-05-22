@@ -1,0 +1,148 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background: #fff4f8;
+  color: #4a4a4a;
+  scroll-behavior: smooth; /* smooth scrolling */
+}
+
+header {
+  background: #c8b6ff;
+  text-align: center;
+  padding: 3rem 1rem 2rem;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 0.3rem;
+  animation: slideDown 1s ease forwards;
+}
+
+.intro {
+  font-style: italic;
+  font-size: 1.2rem;
+  color: #f8e8ff;
+  opacity: 0;
+  animation: fadeIn 2s ease 1.5s forwards;
+}
+
+/* Animations */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+nav {
+  background: #e7c6ff;
+  text-align: center;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(200, 182, 255, 0.5);
+}
+
+nav a {
+  margin: 0 1.2rem;
+  text-decoration: none;
+  color: #5a2a8c;
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+nav a:hover,
+nav a:focus {
+  color: #9c6eff;
+  outline: none;
+}
+
+section {
+  padding: 2rem 1rem;
+  max-width: 800px;
+  margin: auto;
+  background: #fff0f5;
+  border-radius: 15px;
+  box-shadow: 0 3px 10px rgb(198 182 255 / 0.4);
+  margin-bottom: 2rem;
+}
+
+h2 {
+  color: #6a0dad;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #d9b3ff;
+  padding-bottom: 0.3rem;
+}
+
+ul {
+  list-style-type: square;
+  padding-left: 20px;
+}
+
+.project {
+  background: #c8b6ff;
+  padding: 1.2rem 1rem;
+  margin: 1rem 0;
+  border-radius: 12px;
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(110, 60, 170, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.project:hover {
+  transform: scale(1.03);
+}
+
+.project h3 {
+  margin-top: 0;
+}
+
+.project a {
+  color: #f6cdf6;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.project a:hover {
+  color: #ffd1ff;
+}
+
+#contact p {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+}
+
+#contact a {
+  color: #6a0dad;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+#contact a:hover,
+#contact a:focus {
+  text-decoration: underline;
+  outline: none;
+}
+
+footer {
+  text-align: center;
+  padding: 1.2rem 1rem;
+  background: #ffd6ff;
+  color: #6a0dad;
+  font-weight: 600;
+  box-shadow: 0 -2px 10px rgba(198, 182, 255, 0.6);
+}
