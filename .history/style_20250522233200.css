@@ -331,3 +331,12 @@ footer {
 section.visible {
   animation: fadeInUp 1s ease forwards;
 }
+#now {
+  background: #fff0ff;
+  border-radius: 20px;
+  padding: 2rem;
+  margin: 1.5rem auto;
+  max-width: 800px;
+  color: #4a246a;
+  box-shadow: 0 6px 15px rgba(175, 95, 220, 0.3);
+}
