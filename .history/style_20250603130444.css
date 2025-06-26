@@ -1,0 +1,278 @@
+/* CSS Custom Properties for Colors */
+:root {
+  --bg-dark: #000;
+  --bg-light: #fff;
+  --text-dark: #fff;
+  --text-light: #000;
+  --section-bg-dark: #1a1a1a;
+  --section-bg-light: #f0f0f0;
+  --accent: #00ff00;
+  --accent-hover: #00cc00;
+  --shadow-dark: rgba(255, 255, 255, 0.1);
+  --shadow-light: rgba(0, 0, 0, 0.1);
+  --input-bg-dark: #333;
+  --input-bg-light: #ddd;
+}
+
+/* Base styles */
+body {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background: var(--bg-dark);
+  color: var(--text-dark);
+  scroll-behavior: smooth;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+body:not(.dark-theme) {
+  background: var(--bg-light);
+  color: var(--text-light);
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 2rem 1rem;
+  position: relative;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem;
+}
+
+.intro {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin: 0;
+}
+
+/* Theme toggle button */
+#theme-toggle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--accent);
+  color: var(--bg-dark);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+#theme-toggle:hover {
+  background: var(--accent-hover);
+  transform: scale(1.05);
+}
+
+body:not(.dark-theme) #theme-toggle {
+  background: #000;
+  color: var(--accent);
+}
+
+/* Navigation */
+nav {
+  text-align: center;
+  padding: 1rem;
+  margin: 1rem auto;
+  max-width: 800px;
+}
+
+nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: color 0.2s ease;
+}
+
+body:not(.dark-theme) nav a {
+  color: var(--text-light);
+}
+
+nav a:hover,
+nav a:focus,
+nav a[aria-current="page"] {
+  color: var(--accent);
+}
+
+/* Content wrapper */
+.content-wrapper {
+  flex: 1;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Sections */
+section {
+  background: var(--section-bg-dark);
+  padding: 2rem;
+  margin: 2rem 0;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+body:not(.dark-theme) section {
+  background: var(--section-bg-light);
+  color: var(--text-light);
+}
+
+/* Headings */
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  margin: 0 0 1.5rem;
+  color: var(--text-dark);
+}
+
+body:not(.dark-theme) h2 {
+  color: var(--text-light);
+}
+
+h4 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  text-align: center;
+  margin: 1rem 0 0.5rem;
+  color: var(--text-dark);
+}
+
+body:not(.dark-theme) h4 {
+  color: var(--text-light);
+}
+
+/* Skills */
+.skills-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.skill-name {
+  width: 120px;
+  font-weight: 500;
+}
+
+.progress-bar {
+  flex: 1;
+  background: #333;
+  height: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+body:not(.dark-theme) .progress-bar {
+  background: #ccc;
+}
+
+.progress {
+  background: var(--accent);
+  height: 100%;
+  transition: width 0.5s ease;
+}
+
+/* Projects */
+.project {
+  background: var(--section-bg-dark);
+  padding: 1.5rem;
+  margin: 1rem 0;
+  transition: background 0.3s ease;
+}
+
+body:not(.dark-theme) .project {
+  background: var(--section-bg-light);
+}
+
+.project h3 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem;
+}
+
+.project p, .project ul {
+  margin: 0.5rem 0;
+}
+
+.project ul {
+  padding-left: 1.5rem;
+}
+
+.project a {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--bg-dark);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.2s ease;
+}
+
+body:not(.dark-theme) .project a {
+  background: var(--text-light);
+  color: var(--accent);
+}
+
+.project a:hover {
+  background: var(--accent-hover);
+}
+
+body:not(.dark-theme) .project a:hover {
+  background: #333;
+}
+
+/* Screenshot gallery */
+.screenshot-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.screenshot-gallery img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px var(--shadow-dark);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+body:not(.dark-theme) .screenshot-gallery img {
+  box-shadow: 0 2px 4px var(--shadow-light);
+}
+
+.screenshot-gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px var(--shadow-dark);
+}
+
+body:not(.dark-theme) .screenshot-gallery img:hover {
+  box-shadow: 0 4px 8px var(--shadow-light);
+}
+
+/* Image popup */
+.image-popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw
